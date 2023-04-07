@@ -1,0 +1,38 @@
+/* pages/message_board/message_board.wxss */
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.bottom-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+}
+
+.message-count {
+  padding: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.message-list {
+  flex: 1;
+  padding: 10px;
+  margin-bottom: 60px; /* Add a margin to the bottom of the message list to avoid input-container overlapping */
+}
+
+/* ... */
+
+.input-container {  
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+/* ... */

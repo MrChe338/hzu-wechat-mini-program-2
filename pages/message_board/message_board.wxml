@@ -1,0 +1,18 @@
+<!--pages/message_board/message_board.wxml-->
+<view class="container">
+  <view class="message-count">留言数: {{messageCount}}</view>
+  <scroll-view scroll-y="true" class="message-list">
+    <view class="message-item" wx:for="{{messages}}" wx:key="index">
+      <image src="{{item.avatarUrl}}" class="avatar" />
+      <text class="nickname">{{item.nickName}}</text>
+      <text class="timestamp">{{item.timestamp}}</text>
+      <text class="content">{{item.content}}</text>
+    </view>
+  </scroll-view>
+</view>
+<view class="bottom-container">
+  <view class="input-container">
+    <input placeholder="请输入留言内容" bindinput="inputHandler" value="{{inputValue}}" />
+    <button bindtap="submitHandler" style="width: 211rpx; height: 80rpx; display: block; box-sizing: border-box; left: -1rpx; top: 0rpx; position: relative">发送</button>
+  </view>
+</view>
