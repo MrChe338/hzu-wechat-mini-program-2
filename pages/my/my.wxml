@@ -1,0 +1,25 @@
+<view class="wxmlbackground">
+<!--搜索的功能-->
+<view class="container">
+  <input type="text" bindinput="onInput" placeholder="请输入要搜索的 ID" />
+  <view wx:if="{{result}}">
+    <image src="{{result.image}}" />
+    <text>{{result.name}}</text>
+  </view>
+</view>
+
+
+
+<!--显示的数据item-->
+<view class="program-list" wx:for="{{items}}" wx:key="{{index}}">
+<view class="program-item">
+  <text class="program-title">{{item.title}}</text>
+  <text class="program-detail">{{item.detail}}</text>
+  <view class="program-details">
+  <text>{{item.tab}}</text>
+  <text>{{item.name}}</text>
+  </view>
+</view>
+</view>
+
+</view>

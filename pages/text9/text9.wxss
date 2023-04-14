@@ -1,0 +1,60 @@
+
+.advswiper{
+  height: 350rpx;
+  margin-top: 200rpx;
+}/*外部容器高度*/
+
+.advswiper1{
+  height: 200rpx;
+margin-top: 150rpx;
+}/*外部容器1高度*/
+
+.viewadv{
+  background-color:floralwhite;
+  border-radius: 20rpx;
+  width: 95%;
+  margin: auto;
+
+  }/*容器2*/
+
+
+  .switem{
+    display: flex;
+    justify-content: space-evenly;
+    
+
+  }/*对容器2的元素排布*/
+  .switembox{
+  background-color:lightblue;
+  width: 30%;
+  height: 270rpx;
+  margin: 10rpx ;
+  border-radius: 50rpx;
+  justify-content: space-evenly;
+  margin-top: 40rpx;
+  }/*容器2内部的元素*/
+  .switembox1{
+      width: 30%;
+      height: 200rpx;
+      margin: 10rpx ;
+      justify-content: space-evenly;
+      }/*容器2'内部的元素*/
+  .simg{
+    width: 120rpx;
+    height: 40%;
+    margin-top: 20rpx;
+    margin-left: 10rpx;
+  }/*轮播图2'内部元素的图标*/
+  
+  .atext{
+  display: block;
+  font-size: 35rpx;
+  margin-left: 20rpx;
+  color:white;
+  }/*轮播图2的文本*/
+  .btext{
+      display: block;
+      font-size: 35rpx;
+      margin-left: 20rpx;
+      color:black;
+      }/*轮播图2'的文本*/

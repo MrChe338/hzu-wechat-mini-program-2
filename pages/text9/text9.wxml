@@ -1,0 +1,63 @@
+<!--pages/text8/text8.wxml-->
+<view class="wxmlbackgrounds">
+<view class="viewadv">
+<swiper class="advswiper">
+       <block>
+         <swiper-item class="advswiper-item">
+           <view  class="switem">
+
+           <view class="switembox"><image src="../../item/1.png" class="simg"/>
+           <text class="atext">我的项目</text>
+           </view>
+
+           <view class="switembox"><image src="../../item/2.png" class="simg"/>
+           <text class="atext">我的简历</text>
+           </view>
+
+           <view class="switembox"><image src="../../item/3.png" class="simg"/>
+               <text class="atext">我的关注</text>
+           </view>
+
+           <view class="switembox"><image src="../../item/4.png" class="simg"/>
+               <text class="atext">我的论坛</text>
+           </view>
+
+           </view>
+         </swiper-item>
+       </block>
+     </swiper>
+   </view>
+
+
+
+<view class="viewadv">
+<swiper class="advswiper1" >
+       <block>
+         <swiper-item class="advswiper-item1">
+           <view  class="switem">
+
+           <view class="switembox1"><image src="../../item/1.png" class="simg"/>
+           <text class="btext">我的下载</text>
+           </view>
+
+           <view class="switembox1"><image src="../../item/2.png" class="simg"/>
+           <text class="btext">公众号</text>
+           </view>
+
+           <view class="switembox1"><image src="../../item/3.png" class="simg"/>
+               <text class="btext">反馈</text>
+           </view>
+
+           <view class="switembox1"><image src="../../item/4.png" class="simg"/>
+               <text class="btext">关于我们</text>
+           </view>
+
+           </view>
+         </swiper-item>
+       </block>
+     </swiper>
+   </view>
+
+
+
+</view>
