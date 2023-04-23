@@ -1,0 +1,66 @@
+<!--components/myforum/myforum.wxml-->
+
+<view class="myforum">
+  <image src="/images/flower5.png" class="headerImage" mode="aspectFill"></image>
+  <view class="myInfo">
+    <view class="myInfo-header">
+      <view class="myInfo-header-Icon">
+        <image src="/images/blue.png" mode="aspectFill"></image>
+      </view>
+      <view class="myInfo-header-right">
+
+        <view class="fans">
+          <view style="font-weight: 700 ;color: black;">7</view>
+          粉丝
+        </view>
+        <view class="fans">
+          <view style="font-weight: 700 ;color: black;"> 7</view>
+          关注
+        </view>
+        <view class="fans">
+          <view style="font-weight: 700 ;color: black;">7</view>
+          获赞
+
+        </view>
+
+      </view>
+
+    </view>
+    <view class="myInfo-center">
+      <view class="myInfo-center-userInfo">
+        <view class="userName">濹零
+        </view>
+        <view class="userId">id:2114100314</view>
+      </view>
+      <view class="editInformation">
+
+        <view class="editInfo">编辑资料</view>
+      </view>
+    </view>
+    <view class="myInfo-body">
+      <view class="introduction">
+        <view>我是沃玛，做点傻开心的视频，日常发在微博~</view>
+      </view>
+      <view>
+        <view class="myTag">#添加学院等标签</view>
+
+      </view>
+
+      <view class="myfollow">
+        <text>获得{{myfollow}}次点赞 </text>
+        <text>获得{{collected}}次收藏</text>
+      </view>
+
+    </view>
+
+    <view class="myrouter">
+      <my-tabs tabs="{{tabs}}" activeTab="{{activeTab}}" swiperClass="weui-tabs-swiper" bindtabclick="onTabCLick" bindchange="onChange" activeClass="tab-bar-title__selected" duration="600" tab-underline-color="weui-tabs-bar__title">
+        <view class="tab-content" slot="tab-content-{{activeTab}}">
+          111</view>
+      </my-tabs>
+    </view>
+  </view>
+
+
+
+</view>

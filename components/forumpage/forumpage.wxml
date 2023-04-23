@@ -1,0 +1,83 @@
+<!--components/forumpage/forumpage.wxml-->
+
+<view>1 </view>
+<view> 1</view>
+<scroll-view class="forumBody">
+  <view class="recommandAu">
+    <!-- <image src="/images/blue.png"></image> -->
+    <text style="color: rgba(104, 102, 102, 0.5); font-weight: 550;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">优质贴主 :</text> <text style=" float: right;font-size: 12px;color: rgba(146, 143, 141, 0.726);">查看更多</text>
+    <scroll-view scroll-x class='swiper-nav' scroll-left='{{swiperNav.x}}' scroll-with-animation='true' bindtap='swiperNav'>
+      　<view wx:for='{{recAuTab}}' wx:key='title' class='item-nav {{swiperNav.i==index ? "active" : ""}}' data-i='{{index}}'>
+        <view>
+          <image src="{{item.imgUrl}}" class="img-nav"></image>
+        </view>
+        <text class="auName">{{item.title}}</text> 　
+      </view>
+    </scroll-view>
+    <!--  class='item-nav {{swiperNav.i==index ? "active" : ""}}' -->
+  </view>
+
+
+  <view class="topic">
+    <text style="color: rgb(110, 109, 109);font-weight: 500;">热门话题:</text>
+    <view class="topicList" wx:for="{{topic}}" wx:key="content">
+      <text class="topicContent">{{item}}</text>
+    </view>
+  </view>
+  <text style="color: rgba(126, 120, 120, 0.726); font-weight: 550; ">精选文章:</text>
+  <view class="articalist" wx:for="{{articalist}}" wx:key="content">
+    <view class="avater">
+      <view class="avaterPicture">
+        <image src="/images/blue.png" class="avaterIcon"></image>
+      </view>
+      <view class="avaterInfo">
+        <view class="avaterInfoTop">
+          <view class="avaterName">blue
+          </view>
+        </view>
+        <view class="avaterInfoBottom">
+          <view class="publishTime">2023.04.21</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="articleContent">
+      <view class="selecTitle">
+        {{item.title}}
+      </view>
+      <wxs module="sub" src="/utils/string.wxs"></wxs>
+      <view class="selectContent">{{sub.mysubstring(item.content,0,40)}}</view>
+
+      <view class="imageContent">
+        <view class="addImage" wx:for="{{images}}" wx:key="img">
+          <image src="{{item}}"></image>
+        </view>
+      </view>
+
+      <view class="bottomContent">
+        <view class="left-bottom-tag">
+          <text class="tagList">#计算机科学与工程学院</text>
+        </view>
+        <view class="right-bottom-content">
+          <!-- <view class="watch">
+            <image src="/images/watch.png"></image>
+            <text class="watchData">{{watchData}}</text>
+          </view> -->
+          <view class="like">
+            <image src="/images/like.png" />
+            <text class="likeData">{{likeData}}</text>
+          </view>
+          <view class="commment">
+            <image style="position: relative;top:4rpx;" src="/images/comment.png" />
+            <text class="commentData">{{commentData}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+
+</scroll-view>

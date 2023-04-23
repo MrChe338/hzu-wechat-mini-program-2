@@ -1,0 +1,32 @@
+<!--pages/forum/hzu-forum.wxml-->
+<!-- <scroll-view class="content" scroll-y="true" enable-back-to-top="true" bindscrolltoupper="onPullDownRefresh">
+  <view class="refresh">{{date}}</view>
+  <view class="time"></view>
+
+</scroll-view> -->
+
+<view class="forumbody">
+  <view>
+    <!-- <view class="search">
+      <input type="text" placeholder="点击搜索" class="searchTab" />
+    </view> -->
+    <mp-tabs tabs="{{tabs}}" bindchange="onChange" bindtabclick="onTabChange" swiperClass="weui-tabs-swiper" activeClass="tab-bar-title__selected" duration="1000">
+      <block wx:if="{{activeTab==0}}">
+        <view class="tab-content" slot="tab-content-{{activeTab}}" wx:if="{{activeTab}}==0">
+          <view style="height: 25rpx;">blank</view>
+          <forumpage />
+        </view>
+      </block>
+      <block wx:if="{{activeTab==1}}">
+        <view class="tab-content" slot="tab-content-{{activeTab}}" wx:if="{{activeTab}}==1">
+          <allarticles />
+        </view>
+      </block>
+    </mp-tabs>
+  </view>
+  <view class="post-container">
+    <image class="myforum" src="/images/my1.png" bindtap="navigateToTarget2">add</image>
+    <image class="addArticle" src="/images/add.png" bindtap="navigateToTarget">add</image>
+
+  </view>
+</view>

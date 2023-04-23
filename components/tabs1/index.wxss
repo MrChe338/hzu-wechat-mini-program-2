@@ -1,0 +1,65 @@
+.weui-tabs-bar__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #ffffff;
+  height: 100rpx;
+  font-size: 32rpx;
+}
+
+/*tab的主体 即首页，全部帖子下的部分*/
+.tab-content {
+  height: 100%;
+  overflow: scroll;
+}
+
+/*当前选中项的样式*/
+.tab-bar-title__selected {
+  font-size: 38rpx;
+}
+
+/*tabs的标题栏*/
+.weui-tabs-bar__title {
+  /* font-size: 32rpx; */
+  color: #2d2d33;
+
+  padding: 20rpx;
+  padding-bottom: 20rpx;
+
+}
+
+/*内容区域swiper的样式*/
+.weui-tabs-swiper {
+  border: 1px solid rgba(112, 109, 105, 0);
+}
+
+
+
+
+
+
+.weui-tabs {
+  width: 100%
+}
+
+.weui-tabs-bar__wrp {
+  width: 100%;
+  background: #fff
+}
+
+.weui-tabs-bar__content {
+  width: 100%;
+  white-space: nowrap
+}
+
+.weui-tabs-bar__item {
+  display: inline-block
+}
+
+.weui-tabs-bar__title {
+  display: inline-block;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(155, 155, 196, 0.623);
+}

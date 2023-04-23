@@ -1,18 +1,23 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/logs/logs",
-    "pages/message_board/message_board"
+    "pages/message_board/message_board",
+    "pages/forum/hzu-forum",
+    "pages/forum/articles/articles",
+    "components/forumpage/forumpage",
+    "components/allarticles/allarticles",
+
+    "components/myforum/myforum"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [
-      {
+    "list": [{
         "pagePath": "pages/index/index",
         "text": "首页",
         "iconPath": "images/home.png",
@@ -23,9 +28,27 @@
         "text": "留言板",
         "iconPath": "images/board-active.png",
         "selectedIconPath": "images/board-active.png"
+      },
+      {
+        "pagePath": "pages/forum/hzu-forum",
+        "text": "论坛",
+        "iconPath": "images/forum.png",
+        "selectedIconPath": "images/forum.png"
       }
     ]
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序定位"
+    },
+    "scope.writePhotosAlbum": {
+      "desc": "你的相册将用于保存图片"
+    },
+    "scope.writeUserStorage": {
+      "desc": "你的数据将用于保存文章"
+    }
+  },
+  "lazyCodeLoading": "requiredComponents"
 }

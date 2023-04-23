@@ -1,0 +1,21 @@
+<scroll-view>
+  <form class="inputAritcle" bindsubmit="sumbitForm">
+    <view class="title-input">
+      <label>请输入文章标题：</label>
+      <input class="titile-input" name="title" placeholder="起个好标题让你的文章被更多人看见~" />
+    </view>
+    <view>
+      <view class="artilce">
+        <label>请输入正文内容</label>
+        <textarea maxlength="800" name="content">
+    </textarea>
+        <button class="addImg">+</button>
+      </view>
+    </view>
+    <view>
+      <input placeholder="选择模块与标签" />
+    </view>
+    <button formType="submit">发布</button>
+    <button>存草稿</button>
+  </form>
+</scroll-view>

@@ -1,0 +1,65 @@
+<!--components/allarticles/allarticles.wxml-->
+<!-- <view class="container">
+  <view class="articleList">
+    <block wx:for="{{articleList}}" wx:key="item">{{item}}</block>
+  </view>
+  
+</view> -->
+<scroll-view class="allArticle">
+  <view class="recommandTab">
+    <view class="tabItem">推荐</view>
+    <view class="tabItem">最新</view>
+    <view class="tabItem">最热</view>
+    <view class="tabItem">排序</view>
+  </view>
+  
+  <view class="articalist" wx:for="{{articalist}}" wx:key="content">
+    <view class="avater">
+      <view class="avaterPicture">
+        <image src="/images/blue.png" class="avaterIcon"></image>
+      </view>
+      <view class="avaterInfo">
+        <view class="avaterInfoTop">
+          <view class="avaterName">blue
+          </view>
+        </view>
+        <view class="avaterInfoBottom">
+          <view class="publishTime">2023.04.21</view>
+        </view>
+      </view>
+    </view>
+    <view class="articleContent">
+      <view class="selecTitle">
+        {{item.title}}
+      </view>
+      <wxs module="sub" src="/utils/string.wxs"></wxs>
+      <view class="selectContent">{{sub.mysubstring(item.content,0,40)}}</view>
+
+      <view class="imageContent">
+        <view class="addImage" wx:for="{{images}}" wx:key="img">
+          <image src="{{item}}"></image>
+        </view>
+      </view>
+
+      <view class="bottomContent">
+        <view class="left-bottom-tag">
+          <text class="tagList">#计算机科学与工程学院</text>
+        </view>
+        <view class="right-bottom-content">
+          <!-- <view class="watch">
+            <image src="/images/watch.png"></image>
+            <text class="watchData">{{watchData}}</text>
+          </view> -->
+          <view class="like">
+            <image src="/images/like.png" />
+            <text class="likeData">{{likeData}}</text>
+          </view>
+          <view class="commment">
+            <image style="position: relative;top:4rpx;" src="/images/comment.png" />
+            <text class="commentData">{{commentData}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</scroll-view>

@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "mp-tabs": "../../components/tabs/index",
+    "forumpage": "../../components/forumpage/forumpage",
+    "allarticles": "../../components/allarticles/allarticles"
+  },
+  "enablePullDownRefresh": true
+}

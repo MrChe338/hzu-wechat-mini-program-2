@@ -1,0 +1,221 @@
+/* components/allarticles/allarticles.wxss */
+
+
+/*整体文章页*/
+.allArticle {
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  margin: 0 auto;
+}
+
+/*推荐导航*/
+.recommandTab {
+  display: flex;
+  padding: 15rpx;
+  margin-bottom: 10rpx;
+  margin-top: 90rpx;
+  border-bottom: 1px solid rgba(192, 186, 180, 0.781);
+  font-size: 28rpx;
+  color: rgb(33, 134, 250);
+}
+
+.tabItem {
+  padding-right: 20rpx;
+}
+
+/*推荐文章*/
+
+/*header区域*/
+
+/*用户头像区域*/
+.avater {
+  width: 100%;
+  display: flex;
+}
+
+/*用户头像*/
+.avaterPicture {
+  width: 14%;
+}
+
+.avaterIcon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+
+}
+
+/*用户信息*/
+.avaterInfo {
+  width: 91%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+/*用户姓名*/
+
+.avaterInfoTop {
+  width: 100%;
+  height: 30%;
+  font-size: 20rpx;
+
+}
+
+.avaterName {
+  font-size: 35rpx;
+  height: 30%;
+  width: 30%;
+  display: flex;
+  font-family: sans-serif;
+  color: #000000;
+  font-weight: 550;
+}
+
+
+.avaterInfoBottom {
+  width: 100%;
+  height: 20%;
+  font-size: 20rpx;
+  margin-top: 20rpx;
+}
+
+
+
+/*关注*/
+.follow {
+  display: flex;
+  width: 20%;
+  height: 50%;
+  font-size: 30rpx;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-shadow: 0px 0px 20rpx 0px rgba(81, 122, 212, 0.466);
+  border-radius: 30rpx;
+  top: 20rpx;
+  color: rgb(84, 84, 219);
+}
+
+/**/
+
+.articalist {
+
+  box-shadow: 0px 0px 20rpx 0px rgba(199, 196, 196, 0.74);
+  border-radius: 20rpx;
+  width: 95%;
+  padding-left: 20rpx;
+  padding-right: 10rpx;
+  padding-bottom: 30rpx;
+  padding-top: 10rpx;
+  margin: 0 auto;
+  margin-top: 20rpx;
+}
+
+/*文章标题*/
+.selecTitle {
+  color: #1d2129;
+  font-weight: 550;
+  text-align: left;
+  font-size: 35rpx;
+  padding-bottom: 10rpx;
+}
+
+/*文章内容*/
+
+.selectContent {
+  color: #86909c;
+  font-size: 30rpx;
+  padding-bottom: 20rpx;
+}
+
+.recommandArtical {
+  margin-top: 30rpx;
+  height: 600rpx;
+
+}
+
+/*文章插图区域*/
+.imageContent {
+  display: flex;
+  width: 100%;
+  height: 40%;
+}
+
+.addImage {
+  display: flex;
+}
+
+.imageContent image {
+  width: 160rpx;
+  height: 160rpx;
+  padding-left: 10rpx;
+  padding-bottom: 20rpx;
+  box-shadow: 0px 0px 20rpx 0px rgba(233, 233, 233, 0.651);
+}
+
+/*底部时间栏和tag栏*/
+.bottomContent {
+  display: flex;
+  color: #86909c;
+}
+
+.left-bottom-tag {
+  margin-top: 10rpx;
+  text-align: left;
+  width: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+/*底部时间栏和tag栏*/
+.tagList {
+  display: flex;
+  white-space: nowrap;
+  font-size: 30rpx;
+  border-radius: 20rpx;
+  height: 30rpx;
+  padding: 10rpx;
+}
+
+/*tag栏*/
+left-bottom-tag {
+  text-align: left;
+  width: 70%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+
+/*相关话题*/
+.tagList {
+  display: block;
+  white-space: nowrap;
+  font-size: 20rpx;
+  border-radius: 20rpx;
+  box-shadow: 0px 0px 20rpx 0px rgba(197, 195, 195, 0.678);
+}
+
+/*观看，点赞，评论量*/
+.right-bottom-content {
+  font-size: 25rpx;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  width: 50%;
+
+}
+
+.right-bottom-content text {
+  width: 10%;
+  padding-left: 5rpx;
+
+}
+
+.right-bottom-content image {
+  width: 30rpx;
+  height: 30rpx;
+  padding-left: 30rpx;
+}
