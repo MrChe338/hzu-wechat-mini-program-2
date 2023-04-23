@@ -59,6 +59,11 @@ Page({
       url: '../../components/myforum/myforum',
     })
   },
+  navigateToTarget3: function () {
+    wx.navigateTo({
+      url: '../../components/forumpage/forumpage',
+    })
+  },
   addItem: function (e) {
     const itemList = e.detail
     // console.log(e)

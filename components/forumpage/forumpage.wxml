@@ -5,8 +5,10 @@
 <scroll-view class="forumBody">
   <view class="recommandAu">
     <!-- <image src="/images/blue.png"></image> -->
-    <text style="color: rgba(104, 102, 102, 0.5); font-weight: 550;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">优质贴主 :</text> <text style=" float: right;font-size: 12px;color: rgba(146, 143, 141, 0.726);">查看更多</text>
-    <scroll-view scroll-x class='swiper-nav' scroll-left='{{swiperNav.x}}' scroll-with-animation='true' bindtap='swiperNav'>
+    <text style="color: rgba(104, 102, 102, 0.5); font-weight: 550;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; ">优质贴主 :</text>
+    <text style=" float: right;font-size: 12px;color: rgba(146, 143, 141, 0.726);">查看更多</text>
+
+    <scroll-view scroll-x='true' class='swiper-nav' scroll-left='{{swiperNav.x}}' scroll-with-animation='true' bindtap='swiperNav'>
       　<view wx:for='{{recAuTab}}' wx:key='title' class='item-nav {{swiperNav.i==index ? "active" : ""}}' data-i='{{index}}'>
         <view>
           <image src="{{item.imgUrl}}" class="img-nav"></image>
@@ -14,7 +16,6 @@
         <text class="auName">{{item.title}}</text> 　
       </view>
     </scroll-view>
-    <!--  class='item-nav {{swiperNav.i==index ? "active" : ""}}' -->
   </view>
 
 

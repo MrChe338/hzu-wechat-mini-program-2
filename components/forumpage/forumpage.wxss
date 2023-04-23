@@ -31,9 +31,10 @@
 .swiper-nav {
   background-color: #fff;
   white-space: nowrap;
+  width: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   height: 200rpx;
-
+  overflow: hidden;
 }
 
 /*导航栏的文字和图片*/
@@ -63,9 +64,10 @@
   border-radius: 50%;
 }
 
+/*推荐博主名称*/
 .auName {
   position: relative;
-  left: 20rpx;
+  left: 10rpx;
   font-size: 30rpx;
 }
 

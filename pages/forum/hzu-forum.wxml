@@ -29,4 +29,5 @@
     <image class="addArticle" src="/images/add.png" bindtap="navigateToTarget">add</image>
 
   </view>
+  <!-- <button bindtap="navigateToTarget3">111</button> -->
 </view>

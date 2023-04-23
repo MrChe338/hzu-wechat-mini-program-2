@@ -28,16 +28,16 @@ Component({
   },
   methods: {
     swiperNav: function (e) {
-
       this.setData({
         'swiperNav.i': e.target.dataset.i
       })
     },
+
   },
   lifetimes: {
     attached: function () {
-      const recAtitles = ["blue", "Fish", "Sheep", "Bobby"]
-      const images = ["/images/blue.png", "https://p.chilfish.top/avatar.webp", "/images/sheep.png", "/images/img2.png"]
+      const recAtitles = ["blue", "Fish", "Sheep", "Bobby", "hhh"]
+      const images = ["/images/blue.png", "/images/fish.png", "/images/sheep.png", "/images/img2.png", "/images/flower (4).png"]
       const images1 = ["/images/flower2.png", "/images/flower5.png", "/images/flower6.png", "/images/flower4.png"]
       const recAuTab = recAtitles.map((item, index) => ({
         title: item,
