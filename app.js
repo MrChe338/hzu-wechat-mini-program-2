@@ -3,7 +3,7 @@
 App({
   globalData:{
     userinfo:null,
-    userid:null,
+    userid:1,
     host:"http://localhost/",
   },
   //用户登录

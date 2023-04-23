@@ -1,0 +1,138 @@
+<view>
+  <form catchreset="formReset">
+    <!-- 个人基本信息 -->
+    <view class="user-info">
+      <!-- 姓名 -->
+      <view class="item">
+        <text>名字</text><input model:value="{{name}}" type="text" bindblur="handleName" class="rightStart" maxlength="10" placeholder="(张三/张*/**)" placeholder-style="font-size: 28rpx"></input>
+      </view>
+      <!-- 性别 -->
+      <view class="item">
+        <text>性别</text>
+        <picker bindchange="handleGender" model:value="{{index}}" range="{{sex}}" >
+        <view class="show" hidden="{{showGender}}">（选择）</view>
+        <view hidden="{{!showGender}}">{{sex[index]}}</view>
+        </picker>
+      </view>
+      <!-- 年级、学院、专业 -->
+      <view class="item">
+        <text>年级</text>
+        <picker 
+        mode="multiSelector"
+        bindchange="bindPickerChange" 
+        bindcolumnchange="bindPickerColumnChange" 
+        model:value="{{majorIndex}}" 
+        range="{{majorArray}}">
+        <p wx:if="{{showMajor}}">（选择）</p>
+        <view wx:else="{{!showMajor}}">{{majorArray[0][majorIndex[0]]}}</view>
+        </picker>      
+      </view>
+      <view class="item">
+        <text>学院</text>
+        <picker 
+        mode="multiSelector"
+        bindchange="bindPickerChange" 
+        bindcolumnchange="bindPickerColumnChange" 
+        model:value="{{majorIndex}}" 
+        range="{{majorArray}}">
+        <p wx:if="{{showMajor}}">（选择）</p>
+        <span wx:else="{{!showMajor}}">{{majorArray[1][majorIndex[1]]}}</span>
+        </picker>      
+      </view>
+      <view class="item">
+        <text>专业</text>
+        <picker 
+        mode="multiSelector"
+        bindchange="bindPickerChange" 
+        bindcolumnchange="bindPickerColumnChange" 
+        model:value="{{majorIndex}}" 
+        range="{{majorArray}}">
+        <p wx:if="{{showMajor}}">（选择）</p>
+        <span wx:else="{{!showMajor}}">{{majorArray[2][majorIndex[2]]}}</span>
+        </picker>      
+      </view>
+      <!-- 个人标签 !!!!!!!!!!!-->
+      <view class="item">
+        <span>个人标签</span><input model:value="{{tags}}" type="text"	bindblur="handleTags" class="rightStart" maxlength="20" placeholder="肥宅快乐、养生大师、肝王、是个社牛" placeholder-style="font-size: 28rpx" ></input>
+      </view>
+      <!-- 背景图 -->
+      <view class="item-l">
+          <span>背景图</span>
+          <p wx:if="{{showImage}}" bindtap="chooseImage">（打开相册）</p>
+          <image wx:if="{{!showImage}}" model:src="{{background_img}}" bindtap="chooseImage"/>
+          <em></em>
+      </view>
+    </view>
+    <!-- 一句话应聘“高光” -->
+    <view class="oneWord">
+      <text class="header">一句话应聘“高光”</text>
+      <textarea model:value="{{introduction}}" bindinput="limitIntroductionWord" bindblur="handleIntroduction" placeholder="（必填）"	placeholder-style="font-size: 28rpx" maxlength="25">
+        <p>({{currentIntroductionWord}}/{{wordMaxWord}})</p>
+      </textarea>
+    </view>
+      
+    <!-- 详细介绍 -->
+    <view class="detail">
+      <h5 class="header">详细介绍</h5>
+      <ul class="detailform">
+        <!-- 特长 -->
+        <li class="specialty">
+          <i>特长</i><input model:value="{{skills}}" type="text"	bindblur="handleSkills" class="rightStart" maxlength="20" placeholder="码代码、视频剪辑、商务管理、绘画" placeholder-style="font-size: 28rpx" ></input>
+        </li>
+        <!-- 兴趣爱好 -->
+        <li class="hobby">
+          <i>兴趣爱好:</i>
+          <textarea model:value="{{hobbies}}" placeholder="(选填)" bindblur="handleHobbies" placeholder-style="font-size: 28rpx"></textarea>
+        </li>
+        <!-- 项目经历 -->
+        <li class="project">
+          <i>项目经历:</i>
+          <textarea model:value="{{projects}}" placeholder="(选填)" bindblur="handleProjects" placeholder-style="font-size: 28rpx"></textarea>
+        </li>
+        <!-- 获奖情况 -->
+        <li class="prize">
+          <i>获奖情况:</i>
+          <textarea model:value="{{awards}}" placeholder="(选填)" bindblur="handleAwards"  placeholder-style="font-size: 28rpx"></textarea>
+        </li>
+        <!-- 其他 -->
+        <li class="other">
+          <i>其他: </i>
+          <textarea model:value="{{others}}" placeholder="(选填)" bindblur="handleOthers"  placeholder-style="font-size: 28rpx"></textarea>
+        </li>
+      </ul>
+        
+    </view>
+    <!-- 项目意向 -->
+    <view class="intention">
+      <text class="header">项目意向</text>
+      <textarea model:value="{{project_intention}}" bindinput="limitIntentionWordWord" bindblur="handleProjectIntention" placeholder="(选填)"	placeholder-style="font-size: 28rpx" maxlength="2000">
+        <p>({{currentIntentionWord}}/{{intentionMaxWord}})</p>
+      </textarea>
+      <view class="file">
+      <!-- 附件选择 -->
+        <text class="iconfont icon-biezhen" bindtap="choosefile">附件选择</text>
+        <view class="tip" style="left: 30rpx">Tip:支持上传.pdf .docx .pptx文件</view>
+        <block wx:if="{{showFile}}">
+          <span model:value="{{fileName}}" >{{fileName}}</span>
+          <i class="delete" bindtap="deleteFile">删除</i>
+          <i model:value="{{attachments}}" class="view" bindtap="openFile">预览</i>
+        </block>
+      </view>
+    </view>
+    <!-- 保存、重置、预览等操作 -->
+    <view class="save">
+      <view class="reset-view">
+      <navigator url="./myResumeView/myResumeView" open-type="navigate">
+        <button bindtap="handleView" style="display: inline-block; width: 90rpx; height:55rpx; background-color: transparent;">预览</button>
+      </navigator>
+        <button formType="reset" style="display: inline-block; width: 90rpx; height:55rpx; background-color: transparent;">重置</button>
+      </view>
+      <button bindtap="handleSave" style="display: inline-block; width: 690rpx; background-color: #80baf4;">保存</button>
+      <view class="temp_save">
+        <p bindtap="handletempSave">保存但不投入人才库</p>
+      </view>
+      <button formType="reset" bindtap="handleClear" class="clear" style="display: inline-block; width: 180rpx; height:55rpx; background-color: transparent;">清除缓存</button>
+    </view> 
+  </form>
+</view>
+  

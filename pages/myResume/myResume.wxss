@@ -1,0 +1,254 @@
+form {
+  width: 90%;
+}
+/* 用户基本信息 */
+.user-info {
+  padding: 0 30rpx;
+}
+.item {
+  display: flex;
+  justify-content: space-between;
+  padding: 35rpx 0;
+  border-bottom: 1rpx solid #eeeeee;
+}
+
+.item text {
+  color: #777777;
+}
+
+.item picker span {
+  color: #000000;
+}
+.item text::before,
+.oneWord text::before {
+  content: '*';
+  color: #da2121
+}
+
+.rightStart {
+  text-align: right;
+  width: 550rpx;
+}
+.show {
+  font-size: 28rpx;
+  color: #919191
+}
+p {
+  font-size: 28rpx;
+  color: #919191
+}
+
+picker {
+  position: relative;
+  right: 25rpx;
+}
+
+input {
+  display: inline-block;
+}
+.item span,
+.item-l span {
+  color: #777777;
+}
+.item-l {
+  position: relative;
+  padding: 35rpx 0;
+  border-bottom: 1rpx solid #eeeeee;
+} 
+
+.item-l em, 
+.item-l p {
+  float: right;
+}
+
+.item-l p {
+  position: absolute;
+  right: 28rpx;
+}
+image {
+  float: right;
+  position: absolute;
+  right: 35rpx;
+  width: 80rpx;
+  height: 50rpx;
+}
+
+picker::before,
+em::before,
+.detail ul li p::before {
+  content: '';
+  position: absolute;
+  top: 12rpx;
+  right: -12rpx;
+  width: 20rpx;
+  height: 20rpx;
+  border-right: 3rpx solid #a9a9a9;
+  border-bottom: 3rpx solid #a9a9a9;
+  transform: rotate(-45deg);
+}
+em::before {
+  top: 42%;
+  right: 18rpx;
+}
+/* 一句话高光 */
+.oneWord {
+  position: relative;
+  padding: 35rpx 30rpx;
+}
+.oneWord textarea {
+  width: 100%;
+  height: 100rpx;
+  margin: 20rpx 0;
+  border: 1px solid #eeeeee;
+  border-radius: 10rpx;
+}
+.oneWord p {
+  position: absolute;
+  right: 5rpx;
+  bottom: 10rpx;
+}
+/* 详细介绍 */
+.header {
+  font-weight: 600;
+  font-size: 32rpx;
+}
+.detail {
+  padding: 0 30rpx;
+}
+
+.detail ul {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 700rpx;
+  margin: 20rpx 0;
+  border: 1px solid #eeeeee;
+  border-radius: 10rpx; 
+}
+.specialty {
+  flex: 1.2;
+}
+.hobby,
+.project,
+.prize,
+.other {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.detail ul li {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.detail ul li i {
+  position: relative;
+  width: 180rpx;
+  margin-left: 20rpx;
+  font-weight: 600;
+  font-size: 30rpx;
+  color: #919191
+}
+.hobby i,
+.project i,
+.prize i,
+.other i {
+  top: 10rpx;
+  left: -245rpx;
+}
+
+.detail ul li p {
+  width: 135rpx;
+}
+.detail ul li p::before {
+  top: 44%;
+  right: 20rpx;
+}
+.detail ul li textarea {
+  width: 95%;
+  height: 100rpx;
+}
+.detail ul .other {
+  border-bottom: 0rpx solid;
+}
+/* 项目意向 */
+.intention {
+  position: relative;
+  padding: 35rpx 30rpx;
+}
+.intention textarea {
+  width: 100%;
+  height: 300rpx;
+  margin: 20rpx 0;
+  border: 1px solid #eeeeee;
+  border-radius: 10rpx;
+}
+.intention p {
+  position: absolute;
+  right: 5rpx;
+  bottom: 10rpx;
+}
+
+.intention i {
+  float: right;
+  z-index: 1;
+  border: 1px solid;
+  border-radius: 40rpx;
+  width: 75rpx;
+  height: 50rpx;
+  text-align: center;
+  font-size: 14px;
+  line-height: 50rpx;
+  color: #fff;
+}
+.intention .view {
+  border: 1px solid #80b3f0;
+  background-color: #80b3f0;
+}
+.intention .delete {
+  border: 1px solid rgb(218, 58, 58);
+  background-color: rgb(218, 58, 58);
+}
+.file text {
+  color: #80b3f0;
+}
+
+.file .tip {
+  color: #919191;
+  bottom: 0;
+  font-size: 22rpx;
+}
+.save {
+  position: absolute;
+  width: 100%;
+  padding: 18rpx 30rpx 35rpx; 
+}
+.save button {
+  color: #fff;
+  font-size: 40rpx;
+}
+
+.save .reset-view button {
+  float: right;
+  right: 50rpx;
+  padding: 0 5rpx;
+  font-size: 28rpx;
+  color: #919191;
+}
+.save p {
+  position: relative;
+  margin: 5rpx 25rpx;
+  right: -410rpx;
+  font-weight: 600;
+}
+.save .clear {
+  float: right;
+  right: 30rpx;
+  padding: 0 5rpx;
+  font-size: 28rpx;
+  color: #e9504f;
+}

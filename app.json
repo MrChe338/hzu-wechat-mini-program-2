@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/myResume/myResume",
+    "pages/myResume/myResumeView/myResumeView",
     "pages/text9/text9",
     "pages/my/my",
     "pages/logs/logs"

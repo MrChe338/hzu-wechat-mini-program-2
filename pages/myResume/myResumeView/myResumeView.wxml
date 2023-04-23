@@ -1,0 +1,81 @@
+<view class="resumeForm">
+  <!-- 背景 -->
+  <view class="img" >
+    <image src="{{storageResumeData.background_img}}" mode="aspectFit"/>
+  </view>
+  <!-- 基本信息 -->
+    <view class="userinfo">
+      <view class="name">
+        {{storageResumeData.name}} {{storageResumeData.gender == 0 ? '女' : '男'}}
+      </view>
+      <view class="major">
+        {{storageResumeData.grade}}-{{storageResumeData.college}}-{{storageResumeData.major}}
+      </view>
+      <view class="introduction">
+        "{{storageResumeData.introduction}}"
+      </view>
+      <view class="tags">
+        {{storageResumeData.tags}}
+      </view>
+    </view>
+
+  <!-- 个人特长 -->
+  <view class="skills">
+    <view class="iconfont icon-lianxi2hebing_xunzhang"></view>
+    <p></p><span>个人特长</span><p></p>
+    <view class="show-Skills">
+      {{storageResumeData.skills}}
+    </view>
+  </view>
+    
+  <!-- 兴趣爱好 -->
+  <view class="hobbies">
+    <view class="iconfont icon-techang"></view>
+    <p></p><span>兴趣爱好</span><p></p>
+    <view class="showDetail">
+      {{storageResumeData.hobbies}}
+    </view>
+  </view>
+  <!-- 项目经历 -->
+  <view class="projects">
+    <view class="iconfont icon-dicengjiagou"></view>
+    <p></p><span>项目经历</span><p></p>
+    <view class="showDetail">
+      {{storageResumeData.projects}}
+    </view>
+  </view>
+  <!-- 获奖情况 -->
+  <view class="awards">
+    <view class="iconfont icon-medal"></view>
+    <p></p><span>获奖情况</span><p></p>
+    <view class="showDetail">
+      {{storageResumeData.awards}}
+    </view>
+  </view>
+  <!-- 其他 -->
+  <view class="others">
+    <view class="iconfont icon-qita"></view>
+    <p></p><span>其他</span><p></p>
+    <view class="showDetail">
+      {{storageResumeData.others}}
+    </view>
+  </view>
+  <!-- 项目意向 -->
+  <view class="project_intention">
+    <view class="iconfont icon-yixiangxueyuan"></view>
+    <p></p><span>项目意向</span><p></p>
+    <view class="showDetail">
+      {{storageResumeData.project_intention}}
+    </view>
+  </view>
+  <!-- 附件 -->
+  <view class="attachments">
+    <view class="iconfont icon-biezhen"></view>
+    <p></p><span>附件</span><p></p>
+    <view class="showDetail">
+      {{storageResumeData.fileName}}
+    </view>
+    <i wx:if="{{storageResumeData.fileName == '' ? false : true}}" class="view" bindtap="showFail">预览</i>    
+  </view>
+</view>
+  

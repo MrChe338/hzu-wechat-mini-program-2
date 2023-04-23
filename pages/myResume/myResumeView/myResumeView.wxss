@@ -1,0 +1,128 @@
+.resumeForm {
+  padding-top: 0rpx;
+  padding-bottom: 30rpx;
+  background-color: #f7f7f7;
+}
+/* 图片 */
+.img {
+  position: relative;
+  width: 100%;
+  height: 450rpx;
+  text-align: center;
+}
+/* 基本信息 */
+.userinfo{
+  z-index: 1;
+  position: absolute;
+  top: 250rpx;
+  left: 32rpx;
+  padding: 20rpx;
+  margin-bottom: 5rpx;
+  width: 645rpx;
+  background-color: #fafafa;
+  box-shadow:  0rpx 0rpx 5rpx #747373;
+  border-radius: 10rpx;
+}
+.name {
+  font-size: 32rpx;
+  color: #333333;
+  margin-bottom: 5rpx;
+}
+.major {
+  font-size: 24rpx;
+  color: #545353;
+  margin-bottom: 5rpx;
+}
+.introduction {
+  font-size: 28rpx;
+  color: #3a84ee;
+  margin-bottom: 5rpx;
+}
+.userinfo .tags {
+  display: inline-block;
+  padding: 5rpx 20rpx;
+  border-radius: 15rpx;
+  height: 32rpx;
+  line-height: 32rpx;
+  font-size: 28rpx;
+  color: #177128;
+  background-color: #96fda7;
+}
+/* 个人特长 */
+.skills {
+  z-index: 1;
+  padding: 20rpx;
+  margin: 80rpx 30rpx;
+  width: 645rpx;
+  background-color: #fafafa;
+  box-shadow:  0rpx 0rpx 5rpx #747373;
+  border-radius: 10rpx;
+  color: #6bb7ea;
+  font-size: 24rpx;
+}
+.iconfont {
+  text-align: center;
+  margin-bottom: 5rpx;
+}
+
+p {
+  display: inline-block;
+  position: relative;
+  top: 0rpx;
+  margin: 10rpx;
+  border-bottom: 1rpx solid #d5d5d5;
+  width: 254rpx;
+}
+.skills .show-Skills {
+  display: inline-block;
+  padding: 5rpx 15rpx;
+  border-radius: 15rpx;
+  height: 30rpx;
+  line-height: 30rpx;
+  color: #f8b551;
+  background-color: #f9f1bc;
+}
+/* 兴趣爱好 */
+.hobbies,
+.projects,
+.awards,
+.others,
+.project_intention,
+.attachments {
+  z-index: 1;
+  padding: 20rpx;
+  margin: 80rpx 30rpx;
+  width: 645rpx;
+  background-color: #fafafa;
+  box-shadow:  0rpx 0rpx 5rpx #747373;
+  border-radius: 10rpx;
+  color: #6bb7ea;
+  font-size: 24rpx;
+}
+.showDetail {
+  display: inline;
+}
+.showDetail {
+  color: #555555;
+}
+
+.others p {
+  width: 276rpx;
+}
+
+.attachments p {
+  width: 274rpx;
+}
+.view {
+  float: right;
+  border: 1px solid;
+  border-radius: 30rpx;
+  width: 70rpx;
+  height: 40rpx;
+  text-align: center;
+  font-size: 14px;
+  line-height: 40rpx;
+  color: #fff;
+  border: 1px solid #80b3f0;
+  background-color: #80b3f0;
+}
