@@ -2,7 +2,11 @@
   "pages":[
     "pages/text9/text9",
     "pages/my/my",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/myattention/myattention",
+    "pages/xmk/xmk",
+    "pages/xxym/xxym",
+    "pages/chat/chat"
   ],
   "window":{
     "backgroundTextStyle":"light",
@@ -11,5 +15,10 @@
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "xmxq":"/components/xmxq/xmxq",
+    "jlxq":"/components/jlxq/jlxq",
+    "bubble":"/components/bubble/bubble"
+  }
 }

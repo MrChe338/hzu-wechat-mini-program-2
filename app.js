@@ -23,7 +23,7 @@ App({
         if (res.code) {
           //发起网络请求
           wx.request({
-            url: that.globalData.host + "hzu-wechat-mini-program/",
+            url: "http://localhost/index.php/hzu-wechat-mini-program",
             data: {
               "scene": "user_login",
               'code': res.code,
@@ -32,7 +32,7 @@ App({
             success: function (e) {
               //返回userid 用户评论
               that.globalData.userid = e.data;
-              console.log(e.data)
+              console.log(that.globalData.userid)
               wx.hideLoading();
             }
             , fail: function () {

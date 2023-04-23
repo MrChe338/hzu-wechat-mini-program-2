@@ -1,0 +1,54 @@
+.categories {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20rpx;
+  position: relative;
+}
+.category-item {
+  padding: 14rpx 10rpx 10rpx;
+  color: #000000;
+  z-index: 1; /* 增加堆叠层级，使得 `category-item` 在其它元素上方 */
+}
+.active {
+  color: #63cfe2;
+}
+.category-line {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  height: 2rpx;
+  background-color: #63cfe2;
+}
+.line-left {
+  left: 0;
+}
+.line-right {
+  right: 0;
+}
+
+/* index.wxss */
+.container {
+  padding: 10rpx; /* 设置内边距 */
+}
+
+.empty-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 600rpx;
+  height: 100rpx;
+  background-color: #5677fc;
+  border-radius: 10rpx;
+  color: #fff;
+  font-size: 32rpx;
+  margin-bottom: 16rpx;
+  box-shadow: 0 5rpx 5rpx rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  z-index: 10;
+}
+.img{
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  z-index: 1;
+}
