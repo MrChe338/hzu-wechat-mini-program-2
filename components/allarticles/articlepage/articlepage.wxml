@@ -1,0 +1,28 @@
+<!--components/allarticles/articlepage/articlepage.wxml-->
+<text>container</text>
+<view class="article">
+  <view class="articleContent">
+
+    <view class="user-Info">
+      <view class="user-icon">
+        <image src="/images/blue.png" mode="aspectFill"></image>
+      </view>
+      <view class="user-name-time">
+        <view class="user-name">blue</view>
+        <view class="publish-time">2023.4.25 21.00</view>
+
+      </view>
+      <view class='follow{{flag==true?"on":"off"}}' bindtap="isfollow">{{flag==true?"+关注":"已关注"}}</view>
+    </view>
+    <view class="title">这是第一篇博客</view>
+    <textarea class="content">
+      {{content}}
+    </textarea>
+
+    <view class="tagList">
+      <view class="tag" wx:for="{{taglist}}" wx:key="tag">
+        {{item}}
+      </view>
+    </view>
+  </view>
+</view>

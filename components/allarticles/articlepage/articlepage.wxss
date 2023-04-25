@@ -1,0 +1,104 @@
+/* components/allarticles/articlepage/articlepage.wxss */
+
+.article {
+  width: 100%;
+  height: 1000rpx;
+
+
+}
+
+/*标题*/
+.title {
+  width: 100%;
+  text-align: left;
+  font-size: 40rpx;
+  font-weight: 550;
+  padding-left: 10rpx;
+}
+
+/*用户信息*/
+.user-Info {
+  width: 100%;
+  height: 130rpx;
+
+  display: flex;
+
+}
+
+/*头像*/
+.user-icon {
+  width: 15%;
+
+  padding: 10rpx 10rpx 10rpx 20rpx;
+}
+
+.user-icon image {
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+}
+
+/*name time*/
+.user-name-time {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+}
+
+.user-name {
+  font-weight: 550;
+  font-size: 40rpx;
+  padding-top: 10rpx;
+}
+
+.publish-time {
+  white-space: nowrap;
+  color: #6c7177;
+  font-size: 25rpx;
+}
+
+/*是否关注*/
+@import"/assets/follow.wxss";
+
+.followon,
+.followoff {
+  width: 20%;
+  margin-top: 20rpx;
+  margin-right: 5rpx;
+  border-radius: 10rpx;
+  height: 30%;
+}
+
+
+
+/*正文内容*/
+.content {
+  width: 100%;
+  padding-left: 10rpx;
+  height: 700rpx;
+  overflow: scroll;
+  padding-top: 20rpx;
+  font-size: 29rpx;
+}
+
+/*tag栏*/
+.tagList {
+
+  display: flex;
+  width: 100%;
+  white-space: nowrap;
+  height: 100rpx;
+  padding: 20rpx 10rpx 0 0;
+}
+
+.tag {
+  font-size: 23rpx;
+  border-radius: 10rpx;
+  border: 1px solid #348be2ea;
+  padding: 8rpx;
+  height: 40rpx;
+  color: rgb(27, 171, 228);
+  margin-left: 10rpx;
+}

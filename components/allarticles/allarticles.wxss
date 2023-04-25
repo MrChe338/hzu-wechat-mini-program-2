@@ -219,3 +219,18 @@ left-bottom-tag {
   height: 30rpx;
   padding-left: 30rpx;
 }
+
+/*是否关注*/
+@import"/assets/follow.wxss";
+
+.followon,
+.followoff {
+  width: 20%;
+  margin-top: 15rpx;
+
+}
+
+.followon {
+  color: rgb(59, 184, 230);
+  background: none;
+}

@@ -20,12 +20,12 @@
 
 
   <view class="topic">
-    <text style="color: rgb(110, 109, 109);font-weight: 500;">热门话题:</text>
+    <text style="color: rgba(80, 79, 79, 0.726);font-weight: 550;">热门话题:</text>
     <view class="topicList" wx:for="{{topic}}" wx:key="content">
       <text class="topicContent">{{item}}</text>
     </view>
   </view>
-  <text style="color: rgba(126, 120, 120, 0.726); font-weight: 550; ">精选文章:</text>
+  <text style="color: rgba(80, 79, 79, 0.726); font-weight: 550; ">精选文章:</text>
   <view class="articalist" wx:for="{{articalist}}" wx:key="content">
     <view class="avater">
       <view class="avaterPicture">

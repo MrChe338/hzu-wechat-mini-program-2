@@ -1,0 +1,27 @@
+.followon {
+  width: 28%;
+  height: 40%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  background-color: rgb(66, 187, 231);
+  color: rgb(253, 253, 253);
+  transition: 0.8s;
+}
+
+/*已关注*/
+.followoff {
+  width: 28%;
+  height: 40%;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20rpx;
+  margin-top: 30rpx;
+  color: rgb(122, 122, 131);
+  transition: 0.8s;
+}
