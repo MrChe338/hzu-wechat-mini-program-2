@@ -11,15 +11,16 @@
   margin-bottom: 20rpx;
   margin-left: 10rpx;
   position: relative;
-  background: #f1f1f1;
 
+  
 }
 
 .searchTab {
   height: 30rpx;
   font-size: 30rpx;
   width: 90%;
-  color: rgb(150, 140, 150);
+
+  line-height: 38rpx;
 }
 
 .searchIcon {
@@ -58,17 +59,17 @@
 /*当前选中项的样式*/
 .tab-bar-title__selected {
   font-size: 38rpx;
-  border-bottom: blue;
+  
 }
 
 /*tabs的标题栏*/
 .weui-tabs-bar__title {
   /* font-size: 32rpx; */
-  color: #1e3296;
+  color: rgb(0, 0, 0);
+
   padding-left: 30rpx;
   padding-bottom: 20rpx;
   padding-right: 10rpx;
-
 }
 
 /*内容区域swiper的样式*/

@@ -9,9 +9,10 @@ Page({
     userInfor: {},
     title: "",
     content: "",
-
+    taglist: "",
+    imglist: "",
+    filepath: [],
   },
-
   /**
    * 生命周期函数--监听页面加载
    */
@@ -26,13 +27,35 @@ Page({
         })
       }
     })
+
   },
   sumbitForm: function (e) {
+
     wx.navigateTo({
       url: '../../../components/allarticles/allarticles',
     })
   },
-
+  chooseImg: function (e) {
+    const that = this;
+    const filepath = [];
+    wx.chooseMedia({
+      count: 9,
+      mediaType: ['image', 'video'],
+      sourceType: ['album', 'camera'],
+      maxDuration: 30,
+      camera: 'back',
+      success(res) {
+        const tempFiles = res.tempFiles;
+        for (let i = 0; i < res.tempFiles.length; i++) {
+          filepath.push(tempFiles[i].tempFilePath);
+        }
+        console.log(filepath[0])
+        that.setData({
+          filepath: filepath
+        })
+      },
+    })
+  }
   // sumbitForm: function (e) {
   //   const title = e.detail.value.title;
   //   const content = e.detail.value.content;

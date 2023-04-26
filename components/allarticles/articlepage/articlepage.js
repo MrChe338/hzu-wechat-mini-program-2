@@ -20,11 +20,14 @@ Page({
     const id = options.id;
     const title = options.title;
     const content = options.content;
-    // console.log(id, title, content)
+    console.log(id, title, content)
     this.setData({
       id: id,
       title: title,
       content: content
+    })
+    wx.setNavigationBarTitle({
+      title: title,
     })
   },
   isfollow: function () {

@@ -9,9 +9,16 @@
         <label>请输入正文内容</label>
         <textarea maxlength="800" name="content">
     </textarea>
-        <button class="addImg">+</button>
+        <button class="addImg" bindtap="chooseImg">+
+        </button>
+        <view class="imgArea">
+          <view class="imgList" wx:for="{{filepath}}" wx:key="img">
+            <image src="{{item}}" mode="aspectFill"></image>
+          </view>
+        </view>
       </view>
     </view>
+
     <view>
       <input placeholder="选择模块与标签" />
     </view>

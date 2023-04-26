@@ -24,19 +24,19 @@
           </view>
         </view>
         <view class="avaterInfoBottom">
-          <view class="publishTime">2023.04.21</view>
+          <view class="publishTime" style="font-size: 20rpx; color:rgb(88, 85, 85);">2023.04.21</view>
         </view>
       </view>
       <view class='follow{{flag==true?"on":"off"}}' bindtap="isfollow">{{flag==true?"+关注":"已关注"}}</view>
     </view>
-    
+
     <view class="articleContent">
       <view class="selecTitle" bindtap="goToArticle" data-id="{{item.id}}">
         {{item.title}}
       </view>
-      
+
       <wxs module="sub" src="/utils/string.wxs"></wxs>
-      <view class="selectContent">{{sub.mysubstring(item.content,0,40)}}</view>
+      <view class="selectContent" bindtap="goToArticle" data-id="{{item.id}}">{{sub.mysubstring(item.content,0,40)}}</view>
 
       <view class="imageContent">
         <view class="addImage" wx:for="{{images}}" wx:key="img">
@@ -51,11 +51,11 @@
         <view class="right-bottom-content">
 
           <view class="like">
-            <image src="/images/like.png" />
+            <image src="/images/like1.png" />
             <text class="likeData">{{likeData}}</text>
           </view>
           <view class="commment">
-            <image style="position: relative;top:4rpx;" src="/images/comment.png" />
+            <image src="/images/comment1.png" />
             <text class="commentData">{{commentData}}</text>
           </view>
         </view>

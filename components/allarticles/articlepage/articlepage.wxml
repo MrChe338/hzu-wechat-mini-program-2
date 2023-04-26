@@ -1,5 +1,4 @@
 <!--components/allarticles/articlepage/articlepage.wxml-->
-<text>container</text>
 <view class="article">
   <view class="articleContent">
 
@@ -14,15 +13,56 @@
       </view>
       <view class='follow{{flag==true?"on":"off"}}' bindtap="isfollow">{{flag==true?"+关注":"已关注"}}</view>
     </view>
-    <view class="title">这是第一篇博客</view>
-    <textarea class="content">
+    <view class="title">{{title}}</view>
+    <view class="content">
       {{content}}
-    </textarea>
+    </view>
 
     <view class="tagList">
       <view class="tag" wx:for="{{taglist}}" wx:key="tag">
         {{item}}
       </view>
+    </view>
+
+    <view class="comment-section">
+      <text style="color: rgb(0, 0, 0); font-weight: 550;">热门评论</text>
+      <view class="comment-list">
+        <view class="comment-icon">
+          <image src="/images/blue.png"></image>
+        </view>
+        <view class="comment-info">
+          <view class="comment-name">blue</view>
+          <view class="comment-time">2023.4.26.17.20</view>
+          <view class="comment-content">
+            <text>our loves give us chance of letting our memory to age on,but still not match for the time.
+              我们的爱给予了我们沉淀记忆的机会，却最终敌不过时间
+              the world puts off it's mask of vastness to his lover and it becomes small as one song ，as one kiss of the eternal
+              世界在他的爱人面前，扯下了他那巨大的面具，他变小了，小的仿佛像一首歌，小的仿佛一个永恒的吻</text>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view class="postComment">
+
+      <view class="comment-post">
+        <input type="text" name="comment-post" placeholder="点我发表评论~" />
+      </view>
+      <view class="like-collect">
+        <view class="total-comment">
+          <image src="/images/comment1.png" mode="aspectFill"></image>
+          0
+        </view>
+        <view class="like">
+          <image src="/images/like1.png" mode="aspectFill"></image>
+          0
+        </view>
+        <view class="collect">
+          <image src="/images/collect.png" mode="aspectFill"></image>
+          0
+        </view>
+      </view>
+
     </view>
   </view>
 </view>

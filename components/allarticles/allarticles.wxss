@@ -215,8 +215,8 @@ left-bottom-tag {
 }
 
 .right-bottom-content image {
-  width: 30rpx;
-  height: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
   padding-left: 30rpx;
 }
 
@@ -225,9 +225,9 @@ left-bottom-tag {
 
 .followon,
 .followoff {
-  width: 20%;
+  width: 25%;
   margin-top: 15rpx;
-
+  font-size: 28rpx;
 }
 
 .followon {
