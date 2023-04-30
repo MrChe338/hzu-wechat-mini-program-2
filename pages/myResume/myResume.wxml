@@ -4,7 +4,7 @@
     <view class="user-info">
       <!-- 姓名 -->
       <view class="item">
-        <text>名字</text><input model:value="{{name}}" type="text" bindblur="handleName" class="rightStart" maxlength="10" placeholder="(张三/张*/**)" placeholder-style="font-size: 28rpx"></input>
+        <text>名字</text><input model:value="{{name}}" type="text" bindinput="null" bindblur="handleName" class="rightStart" maxlength="10" placeholder="(张三/张*/**)" placeholder-style="font-size: 28rpx"></input>
       </view>
       <!-- 性别 -->
       <view class="item">
@@ -53,7 +53,7 @@
       </view>
       <!-- 个人标签 !!!!!!!!!!!-->
       <view class="item">
-        <span>个人标签</span><input model:value="{{tags}}" type="text"	bindblur="handleTags" class="rightStart" maxlength="20" placeholder="肥宅快乐、养生大师、肝王、是个社牛" placeholder-style="font-size: 28rpx" ></input>
+        <span>个人标签</span><input bindinput="null" model:value="{{tags}}" type="text"	bindblur="handleTags" class="rightStart" maxlength="20" placeholder="肥宅快乐、养生大师、肝王、是个社牛" placeholder-style="font-size: 28rpx" ></input>
       </view>
       <!-- 背景图 -->
       <view class="item-l">
@@ -77,7 +77,7 @@
       <ul class="detailform">
         <!-- 特长 -->
         <li class="specialty">
-          <i>特长</i><input model:value="{{skills}}" type="text"	bindblur="handleSkills" class="rightStart" maxlength="20" placeholder="码代码、视频剪辑、商务管理、绘画" placeholder-style="font-size: 28rpx" ></input>
+          <i>特长</i><input bindinput="null" model:value="{{skills}}" type="text"	bindblur="handleSkills" class="rightStart" maxlength="20" placeholder="码代码、视频剪辑、商务管理、绘画" placeholder-style="font-size: 28rpx" ></input>
         </li>
         <!-- 兴趣爱好 -->
         <li class="hobby">
@@ -114,15 +114,15 @@
         <view class="tip" style="left: 30rpx">Tip:支持上传.pdf .docx .pptx文件</view>
         <block wx:if="{{showFile}}">
           <span model:value="{{fileName}}" >{{fileName}}</span>
-          <i class="delete" bindtap="deleteFile">删除</i>
-          <i model:value="{{attachments}}" class="view" bindtap="openFile">预览</i>
+          <text class="delete" bindtap="deleteFile">删除</text>
+          <text model:value="{{attachments}}" class="view" bindtap="openFile">预览</text>
         </block>
       </view>
     </view>
     <!-- 保存、重置、预览等操作 -->
     <view class="save">
       <view class="reset-view">
-      <navigator url="./myResumeView/myResumeView" open-type="navigate">
+      <navigator url="../myResumeView/myResumeView" open-type="navigate">
         <button bindtap="handleView" style="display: inline-block; width: 90rpx; height:55rpx; background-color: transparent;">预览</button>
       </navigator>
         <button formType="reset" style="display: inline-block; width: 90rpx; height:55rpx; background-color: transparent;">重置</button>

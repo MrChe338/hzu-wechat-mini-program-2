@@ -1,0 +1,30 @@
+<view class="project-item" style="position: relative; left: 76rpx; top: 0rpx; width: 598rpx; height: 270rpx; display: flex; box-sizing: border-box">
+      <!-- 标题 -->
+      <text class="title" style="width: 422rpx; height: 256rpx; display: block; box-sizing: border-box">{{item.project_name}}</text>
+      <!-- 详情介绍 -->
+      <text class="description" style="position: absolute; left: -4rpx; top: 60rpx">{{item.project_intro}}</text>
+      <!-- 标签 -->
+      <view class="tag-list" style="width: 336rpx; height: 70rpx; display: flex; box-sizing: border-box; left: 0rpx; top: 144rpx; position: absolute">
+  <block wx:for="{{tagsarr}}" wx:key="index">
+    <text class="tag">{{item}}</text>
+  </block>
+</view>
+      <!-- 发布者信息 -->
+      <view class="publisher" style="position: absolute; left: 20rpx; top: 239rpx">
+        <image class="avatar" src="/item/1.png" style="width: 50rpx; height: 57rpx; display: block; box-sizing: border-box"></image>
+        <text class="nickname">发布者：{{item.project_leader}}</text>
+      </view>
+      <!-- 获赞和收藏图标及数字 -->
+      <view class="action-list">
+        <view class="action-item">
+          <image class="icon" src="/item/zang.svg"></image>
+          <text class="number">{{item.likes}}</text>
+        </view>
+        <view class="action-item">
+          <image class="icon" src="/item/sc.svg"></image>
+          <text class="number">{{item.favorites}}</text>
+        </view>
+      </view>
+      <!-- 项目状态 -->
+      <text class="status">{{item.status}}</text>
+    </view>

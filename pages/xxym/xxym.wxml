@@ -1,0 +1,55 @@
+<view class="header" style="width: 750rpx; height: 138rpx; display: flex; box-sizing: border-box">
+  <!-- 左边 navigator，跳转到项目信息页面 -->
+  <view class="left-btn">
+    <navigator url="" style="width: 370rpx; height: 130rpx; display: block; box-sizing: border-box">
+      <image style="width: 110rpx; height: 120rpx; display: inline-block; box-sizing: border-box; position: relative; left: 120rpx; top: -13rpx" class="img" src="/item/xmxx.svg" mode="aspectFit"/>
+      <text class="desc" style="position: relative; left: 0rpx; top: 7rpx">项目信息</text>
+    </navigator>
+  </view>
+
+  <!-- 右边 navigator，跳转到系统信息页面 -->
+  <view class="right-btn">
+    <navigator url="" style="width: 370rpx; height: 130rpx; display: block; box-sizing: border-box">
+      <image style="width: 110rpx; height: 120rpx; display: inline-block; box-sizing: border-box; position: relative; left: 130rpx; top: -13rpx" class="img" src="/item/xtxx.svg" mode="aspectFit"/>
+      <text class="desc" style="position: relative; left: 13rpx; top: 7rpx">系统信息</text>
+    </navigator>
+  </view>
+</view>
+<view class="container" >
+<text style="position: relative; left: 0rpx; top: -200rpx">聊 天 列 表</text>
+  
+
+<view class="list-container" style=" position: relative; top: -200rpx">
+  <view 
+    wx:for="{{ friends }}" 
+    wx:key="friends{{ index }}" 
+    class="list-row-wrapper" 
+    hover-class="list-row-hover" 
+    hover-stay-time="50"
+    data-user="{{ item }}" 
+    bindtap="gotoChat">
+    <view class="list-row">
+      <view class="list-icon">
+        <view class="list-photo">
+          <image src="{{ item.photo }}" style="width: 50px; height: 50px;"></image>
+        </view>
+        <view wx:if="{{ item.nums > 0 }}" class="message-dot"></view>
+      </view>
+      <view class="list-content" style="width: 484rpx; height: 100rpx; display: block; box-sizing: border-box">
+        <view class="list-content-layout">
+          <view class="list-content-name">
+            <text class="list-content-title">{{ item.nickname }}</text>
+            <text class="list-content-time">{{ item.time }}</text>
+          </view>
+          <view class="list-content-brief">
+            <text>[{{ item.nums }}条]{{ item.message }}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+
+</view>
+

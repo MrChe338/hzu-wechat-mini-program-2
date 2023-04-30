@@ -1,0 +1,110 @@
+.project-item {
+  display: flex;
+  position: relative;
+  width: 600rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 5rpx 5rpx rgba(0, 0, 0, 0.1);
+  background-color: rgb(248, 244, 244);
+  margin-bottom: 16rpx;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 32rpx;
+  margin-top: 16rpx;
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+}
+
+.description {
+  color: rgb(128, 127, 127);
+  font-size: 28rpx;
+  margin-top: 5rpx; /* 调整与标题的上下间距 */
+  margin-left: 24rpx;
+  margin-right: 24rpx;
+  line-height: 42rpx;
+  position: absolute; 
+  left: 24rpx; /* 将详情介绍靠左对齐 */
+  top: 60rpx; /* 在标题下方显示 */
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 24rpx;
+  margin-top: 0rpx; 
+  position: absolute; 
+  bottom: 100rpx; 
+} 
+
+.tag {
+  display: inline-block;
+  padding: 8rpx 22rpx; /* 调整内边距 */
+  font-size: 30rpx; /* 调整字体大小 */
+  color: #fff;
+  background-color: #56fcbc;
+  border-radius: 30rpx;
+  margin-right: 18rpx;
+  margin-bottom: 18rpx;
+}
+
+
+
+
+
+
+.publisher {
+  display: flex;
+  align-items: center;
+  position: absolute; /* 设置绝对定位 */
+  bottom: 20rpx;
+  left: 20rpx;
+}
+
+.avatar {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%; /* 将头像变为圆形 */
+  margin-right: 10rpx;
+}
+
+.nickname {
+  font-size: 24rpx;
+  color: rgb(112, 112, 112);
+}
+
+.action-list {
+  display: flex;
+  align-items: center;
+  position: absolute; /* 设置绝对定位 */
+  bottom: 20rpx;
+  right: 20rpx;
+}
+
+.action-item {
+  display: flex;
+  margin-left: 30rpx;
+}
+
+.icon {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.number {
+  font-size: 28rpx;
+  margin-left: 10rpx;
+}
+
+.status {
+  position: absolute; /* 设置绝对定位 */
+  top: 20rpx;
+  right: 20rpx;
+  background-color: #56fc9b;
+  color: #fff;
+  padding: 6rpx 12rpx;
+  border-radius: 16rpx;
+  font-size: 24rpx;
+}

@@ -1,7 +1,11 @@
 {
   "pages":[
     "pages/myResume/myResume",
-    "pages/myResume/myResumeView/myResumeView",
+    "pages/myResumeView/myResumeView",
+    "pages/chat/chat",
+    "pages/xxym/xxym",
+    "pages/xmk/xmk",
+    "pages/myattention/myattention",
     "pages/text9/text9",
     "pages/my/my",
     "pages/logs/logs"
@@ -13,5 +17,10 @@
     "navigationBarTextStyle":"black"
   },
   "style": "v2",
-  "sitemapLocation": "sitemap.json"
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "xmxq":"/components/xmxq/xmxq",
+    "jlxq":"/components/jlxq/jlxq",
+    "bubble":"/components/bubble/bubble"
+  }
 }

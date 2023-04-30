@@ -1,0 +1,3 @@
+<view class="box" wx:for="{{xmkarr}}" wx:key="index">
+      <xmxq item="{{item}}"></xmxq>
+    </view>

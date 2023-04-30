@@ -193,7 +193,8 @@ em::before {
   bottom: 10rpx;
 }
 
-.intention i {
+.intention .view,
+.intention .delete {
   float: right;
   z-index: 1;
   border: 1px solid;

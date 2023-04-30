@@ -1,0 +1,38 @@
+<view class="categories">
+  <view class="category-item {{selectedCategory === 'project' ? 'active' : ''}}" data-category="project" bindtap="onSelectCategory">
+    <text>项目</text>
+  </view>
+  <view class="category-item {{selectedCategory === 'resume' ? 'active' : ''}}" data-category="resume" bindtap="onSelectCategory">
+    <text>简历</text>
+  </view>
+  <view class="category-line {{selectedCategory === 'project' ? 'line-left' : 'line-right'}}"></view>
+  <view class="category-line {{selectedCategory === 'resume' ? 'line-right' : 'line-left'}}"></view>
+</view>
+
+<view class="content">
+  <block wx:if="{{selectedCategory === 'project'}}">
+    <view class="project-list">
+  <!-- 循环渲染项目 -->
+      <block wx:for="{{scxm}}" wx:key="id">
+        <view class="project-item" wx:if="{{lenxm}}">
+          <xmxq item="{{item}}"></xmxq>
+    </view>
+      </block>
+      <navigator wx:if="{{lenxm==0}}" class="empty-project" style="position: relative; left: 191rpx; top: 298rpx; width: 368rpx; height: 330rpx; display: flex; box-sizing: border-box" url="/pages/xmk/xmk">去关注</navigator>
+      <image style="width: 618rpx; height: 511rpx; display: inline-block; box-sizing: border-box; position: relative; left: 66rpx; top: -169rpx" wx:if="{{lenxm==0}}" src="/item/qgz.png" class="img" />
+    </view>
+  </block>
+
+  <block wx:if="{{selectedCategory === 'resume'}}">
+    <view class="project-list">
+  <!-- 循环渲染项目 -->
+      <block wx:for="{{scjl}}" wx:key="index">
+        <view class="project-item" wx:if="{{lenjl}}">
+          <jlxq item="{{item}}"></jlxq>
+    </view>
+      </block>
+      <navigator wx:if="{{lenjl==0}}" class="empty-project" style="position: relative; left: 0rpx; top: 450rpx; width: 368rpx; height: 330rpx; display: flex; box-sizing: border-box">去关注</navigator>
+      <image wx:if="{{lenjl==0}}" src="https://img.tukuppt.com/png_preview/00/07/93/zBpYCxmnbi.jpg!/fw/780" class="img" />
+    </view>
+  </block>
+</view>

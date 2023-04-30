@@ -15,9 +15,9 @@
            <text class="atext">我的简历</text>
            </view>
 
-           <view class="switembox"><image src="../../item/3.png" class="simg"/>
+           <navigator class="switembox" 	url="/pages/myattention/myattention" ><image src="../../item/3.png" class="simg"/>
                <text class="atext">我的关注</text>
-           </view>
+           </navigator>
 
            <view class="switembox"><image src="../../item/4.png" class="simg"/>
                <text class="atext">我的论坛</text>

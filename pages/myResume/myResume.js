@@ -69,6 +69,7 @@ Page({
     attachments: '',
     is_into_talent_pool: 1,
   },
+  null() {},
   // 获取姓名name
   handleName(e) {
     const name = e.detail.value
@@ -80,7 +81,7 @@ Page({
     const gender = e.detail.value
     this.setData({
       index: e.detail.value,
-      showGender: !this.data.showGender,
+      showGender: true,
       gender,
     })
     // console.log(gender)
@@ -194,18 +195,17 @@ Page({
         })
         // 上传
         wx.uploadFile({
-          url: app.globalData.host + 'hzu-wechat-mini-program/', //仅为示例，非真实的接口地址
+          url: 'http://47.113.185.238:8080/upload/', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
           name: 'file',
           formData: {
-            upload: 'hzu_upload',
-            userid: 1,
+            'userid': 1,
           },
           success: function (res) {
             var data = res.data
             //do something
             that.setData({
-              background_img: app.globalData.host + data,
+              background_img: 'http://47.113.185.238:8080/' + data,
               showImage: false,
             })
             // console.log(image);
@@ -298,25 +298,19 @@ Page({
           fileName: res.tempFiles[0].name,
         }),
           wx.uploadFile({
-            url: app.globalData.host + 'hzu-wechat-mini-program/', // 上传文件的接口地址
+            url: 'http://47.113.185.238:8080/upload', // 上传文件的接口地址
             filePath: tempFilePath, // 需要上传的文件路径
             name: 'file', // 文件对应的 key，后端接口根据这个 key 获取文件内容
-            formData: {
-              // 其他需要上传的参数，可自定义
-              userid: 1,
-              upload: 'hzu_upload',
+            formData: {   // 其他需要上传的参数，可自定义
+              'userid': 1,
             },
-
             success: function (res) {
               console.log(res.data) // 服务器返回的文件地址，可以根据需要进行处理
-
               that.setData({
-                attachments: app.globalData.host + res.data,
+                attachments: 'http://47.113.185.238:8080/' + res.data,
               })
-
               wx.hideLoading()
             },
-
             fail: function () {
               wx.showModal({
                 title: 'prompt',
@@ -329,8 +323,15 @@ Page({
     })
   },
   openFile() {
-    wx.openDocument({
-      filePath: this.data.attachments,
+    const that = this
+    wx.downloadFile({
+      url: that.data.attachments,
+      success(res) {
+        const filePath = res.tempFilePath
+        wx.openDocument({
+          filePath: filePath,
+        })
+      },
     })
   },
   deleteFile() {
@@ -343,6 +344,21 @@ Page({
   // 重置
   formReset(e) {
     this.setData({
+      name: '',
+      gender: '',
+      grade: '',
+      college: '',
+      major: '',
+      tags: '',
+      background_img: 'https://i.328888.xyz/2023/04/18/iz3kqN.jpeg',
+      introduction: '',
+      skills: '',
+      hobbies: '',
+      projects: '',
+      awards: '',
+      others: '',
+      project_intention: '',
+      attachments: '',  
       chosen: '',
       currentIntroductionWord: 0,
       currentIntentionWord: 0,
@@ -430,11 +446,32 @@ Page({
               // console.log('storageSuccess', resumeData)
             },
           })
-          // 将数据传给后台并投入人才库
+          // 将数据传给后台不投入人才库
           wx.request({
-            method: 'GET',
-            url: app.globalData.host + 'hzu-wechat-mini-program/',
-            data: { scene: 'save_resume', userid: app.globalData.userid, resumepack: resumepack },
+            method: "POST",
+            url: `http://47.113.185.238:8080/resume/save`,
+            header: {
+              'content-type': 'application/json'
+            },
+            data: {
+              "userId": 1,
+              "name": that.data.name,
+              "gender": that.data.gender,
+              "grade": that.data.grade,
+              "college": that.data.college,
+              "major": that.data.major,
+              "tags": that.data.tags,
+              "backgroundImg": that.data.background_img,
+              "introduction": that.data.introduction,
+              "skills": that.data.skills,
+              "hobbies": that.data.hobbies,
+              "projects": that.data.projects,
+              "awards": that.data.awards,
+              "others": that.data.others,
+              "projectIntention": that.data.project_intention,
+              "attachments": that.data.attachments,
+              "isIntoTalentPool": 0
+            },
             success: function (rsp) {
               console.log(rsp.data)
             },
@@ -445,7 +482,7 @@ Page({
               })
             },
           })
-          // 弹窗提示保存成功
+        // 弹窗提示保存成功
           wx.showToast({
             title: '保存成功',
             icon: 'success',
@@ -520,9 +557,30 @@ Page({
             })
             // 将数据传给后台并投入人才库
             wx.request({
-              method: 'GET',
-              url: app.globalData.host + 'hzu-wechat-mini-program/',
-              data: { scene: 'save_resume', userid: app.globalData.userid, resumepack: resumepack },
+              method: "POST",
+              url: `http://47.113.185.238:8080/resume/save`,
+              header: {
+                'content-type': 'application/json'
+              },
+              data: {
+                "userId": 1,
+                "name": that.data.name,
+                "gender": that.data.gender,
+                "grade": that.data.grade,
+                "college": that.data.college,
+                "major": that.data.major,
+                "tags": that.data.tags,
+                "backgroundImg": that.data.background_img,
+                "introduction": that.data.introduction,
+                "skills": that.data.skills,
+                "hobbies": that.data.hobbies,
+                "projects": that.data.projects,
+                "awards": that.data.awards,
+                "others": that.data.others,
+                "projectIntention": that.data.project_intention,
+                "attachments": that.data.attachments,
+                "isIntoTalentPool": 1
+              },
               success: function (rsp) {
                 console.log(rsp.data)
               },
