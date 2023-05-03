@@ -454,7 +454,7 @@ Page({
               'content-type': 'application/json'
             },
             data: {
-              "userId": 1,
+              "user": {"id": 1},
               "name": that.data.name,
               "gender": that.data.gender,
               "grade": that.data.grade,
@@ -563,7 +563,7 @@ Page({
                 'content-type': 'application/json'
               },
               data: {
-                "userId": 1,
+                "user": {"id": 1},
                 "name": that.data.name,
                 "gender": that.data.gender,
                 "grade": that.data.grade,

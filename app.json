@@ -2,9 +2,9 @@
   "pages":[
     "pages/myResume/myResume",
     "pages/myResumeView/myResumeView",
-    "pages/chat/chat",
-    "pages/xxym/xxym",
     "pages/xmk/xmk",
+    "pages/xxym/xxym",
+    "pages/chat/chat",
     "pages/myattention/myattention",
     "pages/text9/text9",
     "pages/my/my",
